@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TaskFlow | Professional To-Do App</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <header class="header">
+            <div>
+                <p class="welcome">WELCOME TO </p>
+                <h1>TaskFlow</h1>
+                <p class="subtitle">Organize your work. Focus on what matters.</p>
+            </div>
+
+            <div class="date-box">
+                <span id="currentDate"></span>
+            </div>
+        </header>
+
+
+        <section class="stats">
+
+            <div class="stat-card">
+                <div class="stat-icon">📋</div>
+                <div>
+                    <span>Total Tasks</span>
+                    <strong id="totalTasks">0</strong>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">⏳</div>
+                <div>
+                    <span>Active</span>
+                    <strong id="activeTasks">0</strong>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">✓</div>
+                <div>
+                    <span>Completed</span>
+                    <strong id="completedTasks">0</strong>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">📈</div>
+                <div>
+                    <span>Progress</span>
+                    <strong id="progressText">0%</strong>
+                </div>
+            </div>
+
+        </section>
+
+
+        <section class="progress-section">
+
+            <div class="progress-info">
+                <span>Today's Progress</span>
+                <span id="progressPercent">0%</span>
+            </div>
+
+            <div class="progress-bar">
+                <div id="progressFill"></div>
+            </div>
+
+        </section>
+
+
+        <section class="task-panel">
+
+            <div class="panel-header">
+                <div>
+                    <h2>My Tasks</h2>
+                    <p>Stay productive and keep everything organized.</p>
+                </div>
+            </div>
+
+
+            <div class="add-task">
+
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="What needs to be done?"
+                >
+
+                <select id="categoryInput">
+                    <option value="Study">Study</option>
+                    <option value="Coding">Coding</option>
+                    <option value="Project">Project</option>
+                    <option value="Personal">Personal</option>
+                </select>
+
+                <select id="priorityInput">
+                    <option value="Low">Low Priority</option>
+                    <option value="Medium" selected>Medium Priority</option>
+                    <option value="High">High Priority</option>
+                </select>
+
+                <input type="date" id="dateInput">
+
+                <button id="addButton">Add Task</button>
+
+            </div>
+
+
+            <div class="toolbar">
+
+                <div class="filters">
+
+                    <button class="filter active" data-filter="all">
+                        All
+                    </button>
+
+                    <button class="filter" data-filter="active">
+                        Active
+                    </button>
+
+                    <button class="filter" data-filter="completed">
+                        Completed
+                    </button>
+
+                </div>
+
+
+                <div class="search-box">
+
+                    <span>🔎</span>
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search tasks..."
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div id="taskList" class="task-list"></div>
+
+
+            <div class="empty-state" id="emptyState">
+
+                <div class="empty-icon">✓</div>
+
+                <h3>No tasks found</h3>
+
+                <p>Add a task and start being productive.</p>
+
+            </div>
+
+
+            <div class="bottom-actions">
+
+                <span id="taskSummary">
+                    0 tasks remaining
+                </span>
+
+                <button id="clearCompleted">
+                    Clear Completed
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <footer>
+            <p>TaskFlow © 2026 | Built with HTML, CSS & JavaScript</p>
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
